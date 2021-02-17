@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { getAllTodos } from "../Core/Redux/Actions/Todos";
+import { getAllEmployees } from "../Core/Redux/Actions/Employees";
 
 const Todos = () => {
   const dispatch = useDispatch();
-  const todos = useSelector(state => state.todos);
+  const employees = useSelector(state => state.employees);
 
   useEffect(() => {
-    if (!todos.data)
-      dispatch(getAllTodos());
-  }, [todos.data]);
+    if (!employees.data)
+      dispatch(getAllEmployees());
+  }, [employees.data]);
 
   return (
     <div>
-      {JSON.stringify(todos)}
+      {JSON.stringify(employees)}
     </div>
   );
 };

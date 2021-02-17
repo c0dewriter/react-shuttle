@@ -1,4 +1,4 @@
-import { TODOS_ACTION_TYPES as t } from "../Actions/Types";
+import { EMPLOYEES_ACTION_TYPES as t } from "../Actions/Types";
 
 export default (state = {/* Initial State */}, action) => {
   switch (action.type) {

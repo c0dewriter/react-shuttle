@@ -1,7 +1,7 @@
-import { TODOS_ACTION_TYPES as t } from "./Types";
-import { getAll } from "../Services/Todos";
+import { EMPLOYEES_ACTION_TYPES as t } from "./Types";
+import { getAll } from "../Services/Employees";
 
-const getAllTodos = () => {
+const getAllEmployees = () => {
   return dispatch => {
     dispatch(request());
     getAll()
@@ -18,12 +18,12 @@ const getAllTodos = () => {
   function request() {
     return { type: t.GET_ALL_REQUEST };
   }
-  function success() {
-    return { type: t.GET_ALL_SUCCESS };
+  function success(data) {
+    return { type: t.GET_ALL_SUCCESS, data };
   }
   function failure(error) {
     return { type: t.GET_ALL_FAILURE, error };
   }
 };
 
-export { getAllTodos };
+export { getAllEmployees };
