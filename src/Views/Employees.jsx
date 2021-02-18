@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { getAllEmployees } from "../Core/Redux/Actions/Employees";
 
-const Todos = () => {
+const Employees = () => {
   const dispatch = useDispatch();
   const employees = useSelector(state => state.employees);
 
@@ -19,4 +19,4 @@ const Todos = () => {
   );
 };
 
-export { Todos };
+export { Employees };

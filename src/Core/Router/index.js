@@ -5,7 +5,7 @@ import { ConnectedRouter } from "connected-react-router";
 
 import configureStore, { history } from "../Redux/configureStore";
 
-import { Todos } from "../../Views/Todos";
+import { Employees } from "../../Views/Employees";
 
 const store = configureStore(/* Place initial state here (if at all) */);
 
@@ -15,7 +15,7 @@ const Routes = () => (
     <ConnectedRouter history={history}>
       <HashRouter>
         <Switch>
-          <Route exact path="/" component={Todos} />
+          <Route exact path="/" component={Employees} />
         </Switch>
       </HashRouter>
     </ConnectedRouter>
